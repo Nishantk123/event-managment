@@ -5,7 +5,6 @@ import rootReducer from './reducer';
 const initialState = {};
 
 const middleware = [thunk];
-console.log(rootReducer)
 const store = createStore(
   rootReducer,
   initialState,

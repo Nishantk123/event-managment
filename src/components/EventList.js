@@ -22,12 +22,9 @@ class EventList extends Component {
         this.props.getEventList(dataset, this.props.history);
     }
     render(){
-        console.log(this.props)
         var EventDataList =[];
         if(this.props.list&&this.props.list.length>0){
-            console.log(this.props.list[0])
             this.props.list.forEach((object, index) => {
-                console.log(object)
                 EventDataList.push(
                     <div className="col-sm-4 event-card">
                         <EventCard 
@@ -109,7 +106,6 @@ class EventList extends Component {
     }
 }
 const mapStateToProps = state => (
-    // console.log(state.eventList)
     {
     list:state.eventList
   }

@@ -21,12 +21,10 @@ class EventDetail extends Component {
         this.props.getEventDetail(EventId, this.props.history);
     }
     render(){
-        console.log(this.props.Detail)
         var EventDetailData = this.props.Detail;
         var similerEvent=[];
         if(EventDetailData&&EventDetailData.similarExperiences&&EventDetailData.similarExperiences.length>0){
             EventDetailData.similarExperiences.forEach((object, index) => {
-                console.log(object)
                 similerEvent.push(
                     <div className="col-sm-4 event-card">
                     <EventCard 
@@ -189,7 +187,6 @@ class EventDetail extends Component {
     }
 }
 const mapStateToProps = state => (
-    // console.log(state.eventList)
     {
     Detail:state.eventDetail
   }

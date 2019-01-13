@@ -5,7 +5,6 @@ export const getEventList = (userData, history) => dispatch => {
     axios
     .post('https://api.kloh.in/kloh/external/v1/activity/list', userData)
   .then(res =>{ 
-    // console.log(res.data.response.results)
     dispatch({
       type: GET_EVENT_LIST,
       payload: res.data.response.results
@@ -16,7 +15,6 @@ export const getEventList = (userData, history) => dispatch => {
 //Get Event Detail 
 export const getEventDetail = (userData, history) => dispatch => {
   var ActivityId="AID190103162901977JHU96OFV784PEF9RM4"
-  console.log(userData);
     axios
     .get( 'https://api.kloh.in/kloh/external/v1/activity/' + userData)
   .then(res =>{ 

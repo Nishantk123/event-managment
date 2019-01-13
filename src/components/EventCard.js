@@ -8,14 +8,12 @@ class EventCard extends Component{
         super();
     }
     handleClick = (EventId) => {
-        console.log(EventId)
         this.props.history.push({
             pathname:'/eventdetail',
             state:{ EventId:EventId }
           })
     }
     render(){
-        console.log(this.props)
         return(
             <div>
             <Card onClick={() => this.handleClick(this.props.activityId)}>
